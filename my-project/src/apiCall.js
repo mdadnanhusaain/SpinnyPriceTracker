@@ -1,6 +1,8 @@
+const proxyUrl = "https://cors-anywhere.herokuapp.com/";
+
 const BASE_URL =
   import.meta.env.MODE === "production"
-    ? "https://api.spinny.com/v3/api/listing/v3/"
+    ? proxyUrl + "https://api.spinny.com/v3/api/listing/v3/"
     : "/api";
 
 console.log(import.meta.env.MODE);
