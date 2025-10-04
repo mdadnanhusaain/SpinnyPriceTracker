@@ -1,0 +1,505 @@
+[
+  {
+    "id": 23681824,
+    "score": 1.0816154233870967,
+    "make": "Kia",
+    "model": "Seltos",
+    "variant": "HTK Plus 1.5",
+    "images": [
+      {
+        "file": {
+          "absurl": "//mda.spinny.com/sp-file-system/public/2025-09-30/0625536f36d34b4689f901851a5560ec/raw/file.JPG"
+        },
+        "file_label": "LEFT FRONT CORNER VIEW"
+      },
+      {
+        "file": {
+          "absurl": "//mda.spinny.com/sp-file-system/public/2025-09-30/973dd0fdd0104c1f96a5ceba06bb3dad/raw/file.JPG"
+        },
+        "file_label": "LEFT SIDE VIEW"
+      },
+      {
+        "file": {
+          "absurl": "//mda.spinny.com/sp-file-system/public/2025-09-30/67a7e214698f46528d4ffd806d213855/raw/file.JPG"
+        },
+        "file_label": "LEFT REAR CORNER VIEW"
+      },
+      {
+        "file": {
+          "absurl": "//mda.spinny.com/sp-file-system/public/2025-09-30/eb753fd131a245d5937e10b4e1f2ff28/raw/file.JPG"
+        },
+        "file_label": "BACK VIEW"
+      },
+      {
+        "file": {
+          "absurl": "//mda.spinny.com/sp-file-system/public/2025-09-30/29d133c363f4499e99dcd3e00158fcab/raw/file.JPG"
+        },
+        "file_label": "RIGHT REAR CORNER VIEW"
+      },
+      {
+        "file": {
+          "absurl": "//mda.spinny.com/sp-file-system/public/2025-09-30/e43f2a3612fe49379ce72254eb5915f3/raw/file.JPG"
+        },
+        "file_label": "RIGHT SIDE VIEW"
+      },
+      {
+        "file": {
+          "absurl": "//mda.spinny.com/sp-file-system/public/2025-09-30/9a6f6ff6006a4402927c278a22903af0/raw/file.JPG"
+        },
+        "file_label": "RIGHT FRONT CORNER VIEW"
+      },
+      {
+        "file": {
+          "absurl": "//mda.spinny.com/sp-file-system/public/2025-09-30/2a6d35277c964bd69e877ff0d18e5522/raw/file.JPG"
+        },
+        "file_label": "FRONT VIEW"
+      },
+      {
+        "file": {
+          "absurl": "//mda.spinny.com/sp-file-system/public/2025-09-30/81489ccc8b824a89814aa3af2768234e/raw/file.JPG"
+        },
+        "file_label": "THUMBNAIL"
+      }
+    ],
+    "without_bg_image": {
+      "file": {
+        "absurl": "//mda.spinny.com/sp-file-system/public/2025-09-30/ea9c2c60b96f4b6c8945be551c8a94b8/raw/file.JPG"
+      },
+      "file_label": "Thumbnail Without Background"
+    },
+    "mileage": 47922,
+    "round_off_mileage": "48K",
+    "round_off_mileage_new": 48000,
+    "make_year": 2020,
+    "price": 895000,
+    "price_breakdown_v2": {
+      "show_discounted_pricing": false,
+      "listing_price": 895000,
+      "listing_price_without_tax": 895000,
+      "original_price": 895000,
+      "original_price_without_tax": 895000,
+      "base_listing_price": 885300,
+      "discount_price": 0,
+      "discount_percent": 0,
+      "new_discount_amount": 0,
+      "new_discount_percent": 0,
+      "tax_data": {
+        "percentage": null,
+        "numeric": null
+      },
+      "original_base_listing_price": 885300,
+      "original_price_breakdown_present": true,
+      "discounted_price_without_add_on_and_tax": 885300,
+      "discounted_price_without_add_on_tax": 885300,
+      "is_manual_discount_change": false,
+      "is_same_listing_price_update": false,
+      "base_add_on_data_list": [
+        {
+          "name": "base_add_on",
+          "display_name": "RC transfer, insurance & more",
+          "value": 9700,
+          "round_off_value": 9000,
+          "infotip": true,
+          "on_click": [
+            {
+              "name": "rc_transfer",
+              "description": null,
+              "infotip": null,
+              "display_name": "RC transfer facilitation",
+              "value": 4000,
+              "order": 5
+            },
+            {
+              "name": "cleaning",
+              "description": "Upon delivery",
+              "infotip": null,
+              "display_name": "Car cleaning & dry cleaning",
+              "value": 1000,
+              "order": 10
+            },
+            {
+              "name": "servicing_cost",
+              "description": "Oil and air filter change, wheel balancing and alignment",
+              "infotip": null,
+              "display_name": "Servicing cost",
+              "value": 3500,
+              "order": 15
+            },
+            {
+              "name": "fastag",
+              "description": null,
+              "infotip": null,
+              "display_name": "FASTag cost",
+              "value": 200,
+              "order": 20
+            },
+            {
+              "name": "road_side_assistance",
+              "description": null,
+              "infotip": null,
+              "display_name": "Roadside assistance cost",
+              "value": 500,
+              "order": 25
+            },
+            {
+              "name": "fuel_cost",
+              "description": "Upon delivery",
+              "infotip": null,
+              "display_name": "Fuel top-up",
+              "value": 500,
+              "order": 30
+            }
+          ]
+        },
+        {
+          "name": "fixes_and_upgrades",
+          "display_name": "Fixes & upgrades",
+          "value": "included",
+          "infotip": true,
+          "on_click": null
+        }
+      ],
+      "original_base_add_on_data_list": [
+        {
+          "name": "base_add_on",
+          "display_name": "RC transfer, insurance & more",
+          "value": 9700,
+          "round_off_value": 9000,
+          "infotip": true,
+          "on_click": [
+            {
+              "name": "rc_transfer",
+              "description": null,
+              "infotip": null,
+              "display_name": "RC transfer facilitation",
+              "value": 4000,
+              "order": 5
+            },
+            {
+              "name": "cleaning",
+              "description": "Upon delivery",
+              "infotip": null,
+              "display_name": "Car cleaning & dry cleaning",
+              "value": 1000,
+              "order": 10
+            },
+            {
+              "name": "servicing_cost",
+              "description": "Oil and air filter change, wheel balancing and alignment",
+              "infotip": null,
+              "display_name": "Servicing cost",
+              "value": 3500,
+              "order": 15
+            },
+            {
+              "name": "fastag",
+              "description": null,
+              "infotip": null,
+              "display_name": "FASTag cost",
+              "value": 200,
+              "order": 20
+            },
+            {
+              "name": "road_side_assistance",
+              "description": null,
+              "infotip": null,
+              "display_name": "Roadside assistance cost",
+              "value": 500,
+              "order": 25
+            },
+            {
+              "name": "fuel_cost",
+              "description": "Upon delivery",
+              "infotip": null,
+              "display_name": "Fuel top-up",
+              "value": 500,
+              "order": 30
+            }
+          ]
+        },
+        {
+          "name": "fixes_and_upgrades",
+          "display_name": "Fixes & upgrades",
+          "value": "included",
+          "infotip": true,
+          "on_click": null
+        }
+      ],
+      "tax_add_on_data_list": [],
+      "base_plus_tax_add_ons": [
+        {
+          "name": "base_add_on",
+          "display_name": "RC transfer, insurance & more",
+          "value": 9700,
+          "round_off_value": 9000,
+          "infotip": true,
+          "on_click": [
+            {
+              "name": "rc_transfer",
+              "description": null,
+              "infotip": null,
+              "display_name": "RC transfer facilitation",
+              "value": 4000,
+              "order": 5
+            },
+            {
+              "name": "cleaning",
+              "description": "Upon delivery",
+              "infotip": null,
+              "display_name": "Car cleaning & dry cleaning",
+              "value": 1000,
+              "order": 10
+            },
+            {
+              "name": "servicing_cost",
+              "description": "Oil and air filter change, wheel balancing and alignment",
+              "infotip": null,
+              "display_name": "Servicing cost",
+              "value": 3500,
+              "order": 15
+            },
+            {
+              "name": "fastag",
+              "description": null,
+              "infotip": null,
+              "display_name": "FASTag cost",
+              "value": 200,
+              "order": 20
+            },
+            {
+              "name": "road_side_assistance",
+              "description": null,
+              "infotip": null,
+              "display_name": "Roadside assistance cost",
+              "value": 500,
+              "order": 25
+            },
+            {
+              "name": "fuel_cost",
+              "description": "Upon delivery",
+              "infotip": null,
+              "display_name": "Fuel top-up",
+              "value": 500,
+              "order": 30
+            }
+          ]
+        },
+        {
+          "name": "fixes_and_upgrades",
+          "display_name": "Fixes & upgrades",
+          "value": "included",
+          "infotip": true,
+          "on_click": null
+        }
+      ],
+      "original_base_plus_tax_add_ons": [
+        {
+          "name": "base_add_on",
+          "display_name": "RC transfer, insurance & more",
+          "value": 9700,
+          "round_off_value": 9000,
+          "infotip": true,
+          "on_click": [
+            {
+              "name": "rc_transfer",
+              "description": null,
+              "infotip": null,
+              "display_name": "RC transfer facilitation",
+              "value": 4000,
+              "order": 5
+            },
+            {
+              "name": "cleaning",
+              "description": "Upon delivery",
+              "infotip": null,
+              "display_name": "Car cleaning & dry cleaning",
+              "value": 1000,
+              "order": 10
+            },
+            {
+              "name": "servicing_cost",
+              "description": "Oil and air filter change, wheel balancing and alignment",
+              "infotip": null,
+              "display_name": "Servicing cost",
+              "value": 3500,
+              "order": 15
+            },
+            {
+              "name": "fastag",
+              "description": null,
+              "infotip": null,
+              "display_name": "FASTag cost",
+              "value": 200,
+              "order": 20
+            },
+            {
+              "name": "road_side_assistance",
+              "description": null,
+              "infotip": null,
+              "display_name": "Roadside assistance cost",
+              "value": 500,
+              "order": 25
+            },
+            {
+              "name": "fuel_cost",
+              "description": "Upon delivery",
+              "infotip": null,
+              "display_name": "Fuel top-up",
+              "value": 500,
+              "order": 30
+            }
+          ]
+        },
+        {
+          "name": "fixes_and_upgrades",
+          "display_name": "Fixes & upgrades",
+          "value": "included",
+          "infotip": true,
+          "on_click": null
+        }
+      ],
+      "discount_data_list": [
+        {
+          "name": "subtotal",
+          "infotip": false,
+          "display_name": "Subtotal",
+          "value": 895000,
+          "heading": true
+        },
+        {
+          "name": "price_drop",
+          "infotip": false,
+          "display_name": "Price drop",
+          "value": 0
+        },
+        {
+          "name": "discount_price",
+          "infotip": false,
+          "display_name": "Final payable amount",
+          "value": 895000,
+          "heading": true
+        }
+      ],
+      "discount_without_tax_data_list": [
+        {
+          "name": "subtotal",
+          "infotip": false,
+          "display_name": "Subtotal",
+          "value": 895000,
+          "heading": true
+        },
+        {
+          "name": "price_drop",
+          "infotip": false,
+          "display_name": "Price drop",
+          "value": 0
+        },
+        {
+          "name": "discount_price",
+          "infotip": false,
+          "display_name": "Discounted price",
+          "value": 895000,
+          "heading": true
+        }
+      ]
+    },
+    "permanent_url": "/buy-used-cars/faridabad/kia/seltos/htk-plus-15-sector-27-2020/23681824/",
+    "sold": false,
+    "city": "Faridabad",
+    "fuel_type": "petrol",
+    "no_of_owners": 1,
+    "color": "grey",
+    "body_type": "suv",
+    "rto": "HR13",
+    "transmission": "manual",
+    "transmission_sub_type": "regular",
+    "hub": "Spinny Car Hub, Faridabad",
+    "hub_id": 100,
+    "booked": false,
+    "upcoming": false,
+    "is_fixed_price": true,
+    "home_test_drive_available": true,
+    "has_three_sixty_view": false,
+    "on_hold": false,
+    "hold_end_time": null,
+    "is_on_hold_for_current_user": false,
+    "emi": 14688,
+    "expected_live_date": null,
+    "procurement_category": "assured",
+    "finance": {
+      "best": {
+        "details": {
+          "loan_amount": {
+            "min": 0,
+            "max": 716000,
+            "best": 537000
+          },
+          "roi": 11.5,
+          "old_roi": 13,
+          "loan_age": {
+            "min": 1,
+            "max": 5.5,
+            "best": 3
+          },
+          "emi": {
+            "best": "14,688"
+          },
+          "old_emi": {
+            "best": "15,241"
+          },
+          "max_ltv": 80,
+          "offer_applicable": true,
+          "offer_id": "10",
+          "savings": 36498,
+          "financeable": 1
+        }
+      }
+    },
+    "token_amount": 10000,
+    "applicable_insurance_validity": {
+      "year": 2026,
+      "month": 8,
+      "day": 24,
+      "free": null
+    },
+    "shortlist_count": 12,
+    "soft_unpublish": false,
+    "car_finder_verdict": null,
+    "max_token_amount": 25000,
+    "benefits_notes": [],
+    "on_road_price": null,
+    "tag_status_order": 1,
+    "latest_publish_date": "2025-10-01 06:21:42",
+    "hub_type": "hub",
+    "hub_short_name": "Sector 27, Faridabad",
+    "tag_status": "available",
+    "image_style_360": true,
+    "perks": [
+      {
+        "heading": "Delhi NCR's most affordable car in segment",
+        "icon": "most_affordable",
+        "tag": "superlative",
+        "subheading": "Across 53 premium SUVs from 2018-21",
+        "icon_image": "https://mda.spinny.com/sp-file-system/public/2024-07-10/f6479210f9d74deda43aa498a1a3795c/raw/Frame 627295.svg.svg",
+        "strength": "strong",
+        "priority": 40,
+        "short_title": "City's most affordable"
+      }
+    ],
+    "consumer_procurement_category": "assured",
+    "is_assured_plus": false,
+    "discount": {
+      "start_time": "2025-10-04 00:00:00",
+      "discounted_car_price": 875000,
+      "end_time": "2025-10-05 23:59:59",
+      "created_at": "2025-10-04 06:21:49",
+      "value": 20000,
+      "final_discounted_price": 875000,
+      "adjusted_mid_listing_price": 875000
+    },
+    "registration_year": 2020,
+    "is_max_certified": 0,
+    "car_geo_data": null,
+    "emi_details": null
+  }
+]
