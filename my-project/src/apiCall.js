@@ -1,6 +1,7 @@
-// src/apiCall.js
-
-const BASE_URL = "/api";
+const BASE_URL =
+  import.meta.env.MODE === "production"
+    ? "https://api.spinny.com/v3/api/listing/v3"
+    : "/api";
 
 /**
  * Builds the full API URL with optional query params.
