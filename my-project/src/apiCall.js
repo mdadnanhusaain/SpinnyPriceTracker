@@ -1,6 +1,6 @@
 const BASE_URL =
   import.meta.env.MODE === "production"
-    ? "https://api.spinny.com/v3/api/listing/v3"
+    ? "https://api.spinny.com/v3/api/listing/v3/"
     : "/api";
 
 console.log(import.meta.env.MODE);
