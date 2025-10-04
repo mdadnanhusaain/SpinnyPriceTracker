@@ -6,4 +6,14 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   base: "/SpinnyPriceTracker/",
   plugins: [react(), tailwindcss()],
+  server: {
+    proxy: {
+      "/api": {
+        target: "https://api.spinny.com/v3/api/listing/v3/",
+        changeOrigin: true,
+        secure: false,
+        rewrite: (path) => path.replace(/^\/api/, ""),
+      },
+    },
+  },
 });

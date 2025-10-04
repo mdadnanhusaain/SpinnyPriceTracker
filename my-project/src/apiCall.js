@@ -3,6 +3,9 @@ const BASE_URL =
     ? "https://api.spinny.com/v3/api/listing/v3"
     : "/api";
 
+console.log(import.meta.env.MODE);
+console.log(BASE_URL);
+
 /**
  * Builds the full API URL with optional query params.
  * @param {Object} params - Optional query parameters.
