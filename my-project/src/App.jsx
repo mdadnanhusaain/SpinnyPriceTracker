@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { buildSpinnyUrl, fetchSpinnyCars } from "./apiCall";
 import { filterData, trimCarDataArray, sortData } from "./utils";
 import { FaCopy, FaArrowUp, FaArrowDown } from "react-icons/fa";
@@ -13,6 +13,7 @@ function App() {
   const [copiedField, setCopiedField] = useState(null);
   const [sortConfig, setSortConfig] = useState(initialSort);
   const [status200, setStatus200] = useState(false);
+  const [showScrollTop, setShowScrollTop] = useState(false);
 
   const notify = (text, idx, field) => {
     setCopiedIdx(idx);
@@ -121,6 +122,20 @@ function App() {
   const handleScrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
+  // Show scroll-to-top button only when scrolled more than one viewport height
+  useEffect(() => {
+    const onScroll = () => {
+      const scrolled = window.scrollY || document.documentElement.scrollTop;
+      setShowScrollTop(scrolled > window.innerHeight);
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    // initialize state on mount
+    onScroll();
+
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   // Handle header click
   const handleSort = (field) => {
@@ -418,26 +433,28 @@ function App() {
           )
         )}
 
-        {/* Scroll to Top Button */}
-        <button
-          onClick={handleScrollToTop}
-          style={{
-            position: "fixed",
-            right: "2em",
-            bottom: "2em",
-            zIndex: 1000,
-            padding: "0.8em 1.5em",
-            background: "#646cff",
-            color: "#fff",
-            border: "none",
-            borderRadius: "2em",
-            fontWeight: "bold",
-            boxShadow: "0 2px 8px rgba(0,0,0,0.15)",
-            cursor: "pointer",
-          }}
-        >
-          Return to Top
-        </button>
+        {/* Scroll to Top Button (shown only after scrolling one viewport height) */}
+        {showScrollTop && (
+          <button
+            onClick={handleScrollToTop}
+            style={{
+              position: "fixed",
+              right: "2em",
+              bottom: "2em",
+              zIndex: 1000,
+              padding: "0.8em 1.5em",
+              background: "#646cff",
+              color: "#fff",
+              border: "none",
+              borderRadius: "2em",
+              fontWeight: "bold",
+              boxShadow: "0 2px 8px rgba(0,0,0,0.15)",
+              cursor: "pointer",
+            }}
+          >
+            Return to Top
+          </button>
+        )}
       </div>
     </>
   );
