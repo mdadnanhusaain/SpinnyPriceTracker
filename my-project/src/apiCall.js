@@ -43,7 +43,7 @@ export async function fetchSpinnyCars(params = {}, setStatus200) {
   try {
     const response = await fetch(url);
     const data = await response.json();
-    setStatus200(response.status === 200);
+    setStatus200(response.status !== 200);
     console.log("Status:- ", response.status);
     return data?.results;
   } catch (error) {

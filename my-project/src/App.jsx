@@ -12,7 +12,7 @@ function App() {
   const [copiedIdx, setCopiedIdx] = useState(null);
   const [copiedField, setCopiedField] = useState(null);
   const [sortConfig, setSortConfig] = useState(initialSort);
-  const [status200, setStatus200] = useState(false);
+  const [status200, setStatus200] = useState(true);
   const [showScrollTop, setShowScrollTop] = useState(false);
 
   const notify = (text, idx, field) => {
