@@ -2,11 +2,13 @@ import { useState, useEffect } from "react";
 import { buildSpinnyUrl, fetchSpinnyCars } from "./apiCall";
 import { filterData, trimCarDataArray, sortData } from "./utils";
 import { FaCopy, FaArrowUp, FaArrowDown } from "react-icons/fa";
+import { LuLoaderCircle } from "react-icons/lu";
 import "./App.css";
 
 function App() {
   const initialSort = { field: "year", order: "desc" };
 
+  const [isFetching, setIsFetching] = useState(false);
   const [apiResult, setApiResult] = useState(null);
   const [filterResult, setFilterResult] = useState(null);
   const [copiedIdx, setCopiedIdx] = useState(null);
@@ -92,7 +94,8 @@ function App() {
         model: form.model.replace(" ", "-"),
         fuel_type: form.fuel_type.replaceAll(" ", ","),
       },
-      setStatus200
+      setStatus200,
+      setIsFetching
     );
 
     const trimmedResults = trimCarDataArray(result);
@@ -192,7 +195,15 @@ function App() {
             placeholder="Fuel Type (required)"
             required
           />
-          <button type="submit" style={{ marginTop: "1em" }}>
+          <button
+            type="submit"
+            style={{ marginTop: "1em" }}
+            disabled={isFetching}
+            className="flex justify-center items-center gap-4"
+          >
+            {isFetching && (
+              <LuLoaderCircle className="animate-spin text-3xl" />
+            )}{" "}
             Call Spinny API
           </button>
         </form>

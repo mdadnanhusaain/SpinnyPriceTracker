@@ -38,13 +38,19 @@ export function buildSpinnyUrl(params = {}) {
  * Fetches data from Spinny API and logs the result.
  * @param {Object} params - Optional query parameters.
  */
-export async function fetchSpinnyCars(params = {}, setStatus200) {
+export async function fetchSpinnyCars(
+  params = {},
+  setStatus200,
+  setIsFetching
+) {
   const url = buildSpinnyUrl(params);
   try {
+    setIsFetching(true);
     const response = await fetch(url);
     const data = await response.json();
     setStatus200(response.status === 200);
     console.log("Status:- ", response.status);
+    setIsFetching(false);
     return data?.results;
   } catch (error) {
     console.error("Spinny API Error:", error);
