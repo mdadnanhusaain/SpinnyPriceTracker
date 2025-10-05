@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { fetchSpinnyCars } from "./apiCall";
+import { buildSpinnyUrl, fetchSpinnyCars } from "./apiCall";
 import { filterData, trimCarDataArray, sortData } from "./utils";
 import { FaCopy, FaArrowUp, FaArrowDown } from "react-icons/fa";
 import "./App.css";
@@ -12,6 +12,7 @@ function App() {
   const [copiedIdx, setCopiedIdx] = useState(null);
   const [copiedField, setCopiedField] = useState(null);
   const [sortConfig, setSortConfig] = useState(initialSort);
+  const [status200, setStatus200] = useState(false);
 
   const notify = (text, idx, field) => {
     setCopiedIdx(idx);
@@ -85,10 +86,13 @@ function App() {
       return;
     }
 
-    const result = await fetchSpinnyCars({
-      model: form.model.replace(" ", "-"),
-      fuel_type: form.fuel_type.replaceAll(" ", ","),
-    });
+    const result = await fetchSpinnyCars(
+      {
+        model: form.model.replace(" ", "-"),
+        fuel_type: form.fuel_type.replaceAll(" ", ","),
+      },
+      setStatus200
+    );
 
     const trimmedResults = trimCarDataArray(result);
 
@@ -99,8 +103,6 @@ function App() {
       initialSort.order
     );
 
-    console.log("Sorted (default):", sortedResults);
-
     setApiResult(result);
     setFilterResult(sortedResults);
     setSortConfig(initialSort);
@@ -110,10 +112,7 @@ function App() {
   const handleFilterData = (updatedFilterForm = filterForm) => {
     if (!apiResult) return;
     const newFilteredResult = filterData(updatedFilterForm, apiResult);
-    console.log("New FIltered Result, ", newFilteredResult);
     const trimmedResults = trimCarDataArray(newFilteredResult);
-
-    console.log("Trimmed Data", trimmedResults);
 
     setFilterResult(trimmedResults);
   };
@@ -135,6 +134,14 @@ function App() {
     // Apply sorting on the current filtered data
     const sorted = sortData(filterResult, field, nextOrder);
     setFilterResult(sorted);
+  };
+
+  const handleRedirect = () => {
+    const url = buildSpinnyUrl({
+      model: form.model.replace(" ", "-"),
+      fuel_type: form.fuel_type.replaceAll(" ", ","),
+    });
+    window.open(url, "_blank");
   };
 
   return (
@@ -174,6 +181,16 @@ function App() {
             Call Spinny API
           </button>
         </form>
+
+        {!status200 && (
+          <button
+            type="submit"
+            style={{ marginTop: "1em" }}
+            onClick={handleRedirect}
+          >
+            Redirect website
+          </button>
+        )}
 
         {/* Filter Form */}
         <form

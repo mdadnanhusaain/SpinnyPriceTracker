@@ -13,7 +13,7 @@ console.log(BASE_URL);
  * @param {Object} params - Optional query parameters.
  * @returns {string} Full API URL
  */
-function buildSpinnyUrl(params = {}) {
+export function buildSpinnyUrl(params = {}) {
   const defaultParams = {
     city: "delhi-ncr",
     product_type: "cars",
@@ -28,19 +28,23 @@ function buildSpinnyUrl(params = {}) {
       ([key, val]) => `${encodeURIComponent(key)}=${encodeURIComponent(val)}`
     )
     .join("&");
-  return `${BASE_URL}?${query}`;
+
+  const finalUrl = `${BASE_URL}?${query}`;
+  console.log("URL:- ", finalUrl);
+  return finalUrl;
 }
 
 /**
  * Fetches data from Spinny API and logs the result.
  * @param {Object} params - Optional query parameters.
  */
-export async function fetchSpinnyCars(params = {}) {
+export async function fetchSpinnyCars(params = {}, setStatus200) {
   const url = buildSpinnyUrl(params);
   try {
     const response = await fetch(url);
     const data = await response.json();
-    console.log("Spinny API Response:", data?.results);
+    setStatus200(response.status === 200);
+    console.log("Status:- ", response.status);
     return data?.results;
   } catch (error) {
     console.error("Spinny API Error:", error);
