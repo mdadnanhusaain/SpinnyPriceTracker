@@ -176,6 +176,7 @@ function App() {
             marginBottom: "1em",
           }}
           onSubmit={(e) => {
+            setStatus200(true);
             e.preventDefault();
             setFilterForm(initialFilterForm);
             handleSpinnyApiCall();
@@ -201,21 +202,26 @@ function App() {
             disabled={isFetching}
             className="flex justify-center items-center gap-4"
           >
-            {isFetching && (
-              <LuLoaderCircle className="animate-spin text-3xl" />
-            )}{" "}
+            {isFetching && <LuLoaderCircle className="animate-spin text-3xl" />}{" "}
             Call Spinny API
           </button>
         </form>
 
         {!status200 && (
-          <button
-            type="submit"
-            style={{ marginTop: "1em" }}
-            onClick={handleRedirect}
-          >
-            Redirect website
-          </button>
+          <div className="py-4">
+            <h3>
+              Issue with the API. May be free service has stopped. Please start
+              it.
+            </h3>
+            <button
+              type="submit"
+              style={{ margin: "1rem" }}
+              onClick={handleRedirect}
+            >
+              Redirect to the website
+            </button>
+            <h3>If still not resolved, simply call me Bhaijaan 😉.</h3>
+          </div>
         )}
 
         {/* Filter Form */}
